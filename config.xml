@@ -1,8 +1,8 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.fapa.mob" version="1.0.0">
-  <name>FAPA</name>
-  <description>Hello World sample application that responds to the deviceready event.</description>
-  <author href="http://phonegap.com" email="support@phonegap.com">PhoneGap Team</author>
-  <content src="index.html"/>
+  <name>NETTOYAGE FAPA</name>
+  <description>NETTOYAGE FAPA INC. La version mobile de votre site Web avec des fonctionnalités en ligne ou hors-ligne.</description>
+  <author href="http://www.codiseum.com" email="gerencia@codiseum.com">Codiseum</author>
+  <content src="html/index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1"/>
