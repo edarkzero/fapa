@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../external/toastr/toastr.css">
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script type="text/javascript" src="../js/modernizr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../external/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../external/bootstrap-switcher/css/bootstrap-switch.min.css">
+    <title>NETTOYAGE FAPA INC.</title>
+</head>
+
+<body>
+<div class="app">
+</div>
+<!-- Load page -->
+<div class="animationload" style="display: none;">
+    <div class="loader" style="display: none;"></div>
+</div>
+
+<!-- NAVBAR SECTION -->
+<div class="navbar navbar-main navbar-fixed-top">
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div class="info">
+                        <div class="info-item">
+                            <span class="fa fa-phone"></span> Téls. 514 322 7635 / 514 603 8465
+                        </div>
+                        <div class="info-item">
+                            <span class="fa fa-envelope-o"></span> <a href="mailto:perera.angelica@hotmail.com" title="">Email perera.angelica@hotmail.com</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <div class="top-sosmed pull-right">
+                        <a href="#" title=""><span class="fa fa-facebook"></span></a>
+                        <a href="#" title=""><span class="fa fa-twitter"></span></a>
+                        <a href="#" title=""><span class="fa fa-instagram"></span></a>
+                        <a href="#" title=""><span class="fa fa-pinterest"></span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="../images/logo_blue.png" alt=""></a>
+
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">ACCUEIL</a></li>
+                <li><a href="about.html">NOUS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">REGISTRE <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="auth_register.html">Employé</a></li>
+                        <li><a href="customer_create.html">Client</a></li>
+                    </ul>
+                </li>
+                <li><a href="auth_login.html">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- BANNER -->
+<div class="section subbanner" style="background:url('../images/slide_page.jpg') no-repeat center center;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="caption">
+                    <h3>SERVICES</h3>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Accueil</a></li>
+                        <li class="active">FAQ</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="services" class="section services">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="page-title">
+                    <h2 class="lead">COMMENT ÇA MARCHE</h2>
+                    <p class="sublead">Tout pour commencer</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel-group panel-faq" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading active" role="tab" id="heading1">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1" class="">
+                                    Avez-vous un utilisateur et mot de passe?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1" aria-expanded="true">
+                            <div class="panel-body">
+                                <p>Si vous ne disposez pas d'un utilisateur et mot de passe, s'il vous plaît inscrire un. Sinon, connectez-vous avec vos informations d'identification (utilisateur et mot de passe) fournis par l'administrateur du système.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading2">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Où puis-je inscrire mes clients ou employés?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                                <p>Vous devez être connecté et cliquez sur votre "email" dans le menu en haut à droite et choisissez "admin". Vous y trouverez des options comme ceci:</p>
+                                <ul class="faq-list">
+                                    <li><i class="fa fa-check-square"></i>Catégories.</li>
+                                    <li><i class="fa fa-check-square"></i>Sous-catégories.</li>
+                                    <li><i class="fa fa-check-square"></i>Employés.</li>
+                                    <li><i class="fa fa-check-square"></i>Clients.</li>
+                                </ul>
+                                <p>Chaque option vous donne la possibilité de gérer vos employés et clients information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading3">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Comment puis-je inscrire mon horaire de travail?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                                <p>Si vous êtes un utilisateur avec les droits des employés, vous pouvez trouver une option spéciale dans le menu du haut à droite, où votre "email" est affiché, vous pouvez cliquer et se trouve un élément "horaire", cliquez dessus, puis vous peut stocker et consulter vos horaires</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ajax-loading" class="hide" onclick="$(this).toggleClass('hide',true);">
+    <div>
+        <p id="ajax-loading-title">Chargement</p>
+    </div>
+    <div>
+        <img style="width: 100%;" src="../images/loading.gif" alt="Chargement">
+    </div>
+</div>
+
+<!-- FOOTER SECTION -->
+<div class="footer">
+
+    <div class="f-desc">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="footer-item">
+                        <div class="footer-logo">
+                            <img src="../images/logo_gray.png" alt="">
+                        </div>
+                        <p>La qualité de nos services garantie la fidélité de notre clientèle et est notre motivation quotidienne. Vous trouverez ci-joint notre profil, où sont énumérés les divers services offerts par notre entreprise. N’hésitez pas à nous contacter si de plus amples
+                            informations s’avèrent nécessaires. Nous vous remercions à l’avance de l’attention que vous porterez à ce document. Veuillez accepter, nos salutations distinguées.</p>
+                        <div class="footer-sosmed">
+                            <a href="#" title="">
+                                <div class="item">
+                                    <i class="fa fa-facebook"></i>
+                                </div>
+                            </a>
+                            <a href="#" title="">
+                                <div class="item">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                            </a>
+                            <a href="#" title="">
+                                <div class="item">
+                                    <i class="fa fa-pinterest"></i>
+                                </div>
+                            </a>
+                            <a href="#" title="">
+                                <div class="item">
+                                    <i class="fa fa-google"></i>
+                                </div>
+                            </a>
+                            <a href="#" title="">
+                                <div class="item">
+                                    <i class="fa fa-instagram"></i>
+                                </div>
+                            </a>
+                            <a href="#" title="">
+                                <div class="item">
+                                    <i class="fa fa-linkedin"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h4>ENTRER EN CONTACT</h4>
+                        </div>
+                        <div class="footer-getintouch">
+                            <div class="footer-getintouch-item">
+                                <div class="icon">
+                                    <b class="fa fa-phone"></b>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc-1">Tél.</div>
+                                    <div class="desc-2">:</div>
+                                    <div class="desc-3">514 322 7635<br>514 603 8465</div>
+                                </div>
+                            </div>
+                            <div class="footer-getintouch-item">
+                                <div class="icon">
+                                    <b class="fa fa-envelope "></b>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc-1">Email</div>
+                                    <div class="desc-2">:</div>
+                                    <div class="desc-3"><a href="mailto:perera.angelica@hotmail.com" title="">perera.angelica@hotmail.com</a></div>
+                                </div>
+                            </div>
+                            <div class="footer-getintouch-item">
+                                <div class="icon">
+                                    <b class="fa fa-globe"></b>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc-1">Website</div>
+                                    <div class="desc-2">:</div>
+                                    <div class="desc-3">www.fapa.com</div>
+                                </div>
+                            </div>
+                            <div class="footer-getintouch-item">
+                                <div class="icon">
+                                    <b class="fa fa-map-marker"></b>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc-1">Adresse</div>
+                                    <div class="desc-2">:</div>
+                                    <div class="desc-3">4320 Boulevard Henri-Bourassa O. <br>Montréal, Qc., H4L 1A7</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fcopy">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p class="ftex">© 2016 NETTOYAGE FAPA INC. par Angelica Franco Perera - Tous les droits sont réservés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="modal-dialog" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body"></div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-dialog-schedule" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-delete-wrapper">
+    <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modalDelete">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="modalDelete">Effacer l'article</h4>
+                </div>
+                <div class="modal-body">
+                    ¿Voulez-vous supprimer cet élément?.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Non</button>
+                    <button type="button" class="btn btn-success" id="modal-delete-button" data-id="-1" data-type="-1">Oui</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="../external/toastr/toastr.min.js"></script>
+<script type="text/javascript" src="../external/moment/moment.min.js"></script>
+<script type="text/javascript" src="../external/moment/locale/fr.js"></script>
+<script type="text/javascript" src="../external/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../external/bootstrap-switcher/js/bootstrap-switch.min.js"></script>
+
+<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+<script>MainApp.language = 'fr';</script>
+</body>
+
+</html>

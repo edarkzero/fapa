@@ -1,0 +1,106 @@
+.panel-default > .panel-heading {
+    background-color: #E38F34;
+    color: #fff;
+}
+
+#ajax-loading {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+#ajax-loading-title {
+    font-size: 1.2em;
+}
+
+.shake .form-control {
+    padding: 0px 10px !important;
+    height: 50px !important;
+}
+
+form .select2, .select2-container--default .select2-search--inline .select2-search__field
+{
+    width: 100%!important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,.select2-container--default .select2-selection--single
+{
+    height: 34px !important;
+    line-height: 34px !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+{
+    background-color: #E38F34!important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+{
+    background-color: #E38F34 !important;
+    color: #fff !important;
+    border-color: #E38F34 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove
+{
+    color: #fff !important;
+}
+
+.tooltip .tooltip-inner
+{
+    background-color: #E38F34 !important;
+    color: #fff !important;
+}
+
+.tooltip.top .tooltip-arrow
+{
+    border-top-color: #E38F34 !important;
+}
+
+.tooltip.bottom .tooltip-arrow
+{
+    border-bottom-color: #E38F34 !important;
+}
+
+.bootstrap-switch .bootstrap-switch-container span
+{
+    height: auto !important;
+}
+
+.stripe0
+{
+    background-color: #E38F34 !important;
+    color: #fff;
+}
+
+.stripe1
+{
+
+}
+
+.stripe2, .stripe2 td a
+{
+    background-color: #dcdcdc !important;
+    color: #504a47;
+}
+
+.dl-horizontal dt, .dl-horizontal dd
+{
+    padding: 5px !important;
+}
+
+.dl-horizontal dt
+{
+    background-color: #E38F34 !important;
+    color: #fff !important;
+    border-radius: 10px;
+}
+
+.dl-horizontal dd
+{
+    background-color: #faebd7 !important;
+    color: #daa520;
+    border-radius: 3px;
+    font-size: 1.2em;
+}
