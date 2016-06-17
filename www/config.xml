@@ -17,7 +17,7 @@
     </author>
 
     <!-- Define the main entry-point to the application -->
-    <content src="html/index.html" />
+    <content src="index.html" />
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />

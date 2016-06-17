@@ -2,7 +2,7 @@
   <name>NETTOYAGE FAPA</name>
   <description>NETTOYAGE FAPA INC. La version mobile de votre site Web avec des fonctionnalités en ligne ou hors-ligne.</description>
   <author href="http://www.codiseum.com" email="gerencia@codiseum.com">Codiseum</author>
-  <content src="html/index.html"/>
+  <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1"/>

@@ -6,9 +6,9 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>FAPA</name>
-    <description>Hello World sample application that responds to the deviceready event.</description>
-    <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
+    <name>NETTOYAGE FAPA</name>
+    <description>NETTOYAGE FAPA INC. La version mobile de votre site Web avec des fonctionnalités en ligne ou hors-ligne.</description>
+    <author email="gerencia@codiseum.com" href="http://www.codiseum.com">Codiseum</author>
     <content src="index.html" />
     <icon src="icon.png" />
     <access origin="*" />
