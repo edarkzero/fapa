@@ -106,11 +106,17 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">REGISTRE <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="auth_register.html">Employé</a></li>
-                        <li><a href="customer_create.html">Client</a></li>
+                        <li><a href="auth/register" class="external-link">Employé</a></li>
+                        <li><a href="customer/create" class="external-link">Client</a></li>
                     </ul>
                 </li>
-                <li><a href="auth_login.html">LOGIN</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOGIN <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="auth/login/user" class="external-link">Utilisateurs</a></li>
+                        <li><a href="auth/login/admin" class="external-link">Compte</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -125,7 +131,7 @@
                     <h3>SERVICES</h3>
                     <ol class="breadcrumb">
                         <li><a href="#">Accueil</a></li>
-                        <li class="active">Services</li>
+                        <li class="active">À PROPOS DE NOUS</li>
                     </ol>
                 </div>
             </div>
@@ -135,115 +141,124 @@
 </div>
 
 
-<!-- ABOUT SECTION -->
 <div id="services" class="section services">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="page-title">
-                    <h2 class="lead">NOS SERVICES</h2>
-                    <p class="sublead">La qualité de nos services garantie la fidélité de notre clientèle et est notre motivation quotidienne.</p>
+            <br>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <form class="form-horizontal form-contact shake" role="form" method="POST" action="http://servicefapa.com/auth/register">
+                            <input type="hidden" name="_token" value="LoklHEgvoQeM2Y1lZ23NjRCtT7jFEMptXDfkeldC">
+                            <input type="hidden" name="_type" value="1">
+
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">INFORMATION PERSONNELLE</h3>
+                                </div>
+                                <div class="panel-body">
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+
+                                            <select class="form-control" name="document_type_id"><option value="1">Permis de conduire</option><option value="2">Carte maladie (RAMQ)</option></select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+
+                                            <input class="form-control" placeholder="Document" name="doc_number" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+
+                                            <input class="form-control" placeholder="Prénom" name="name" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+
+                                            <input class="form-control" placeholder="Noms" name="surname" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+
+                                            <select class="form-control" name="category_id"><option value="1">Service de Salubrité</option><option value="2">Service d’entretien de bâtiment</option><option value="3">Services Spécialisés</option><option value="4">Individuelle de ligne de production</option></select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="custom-dropzone" class="dropzone needsclick dz-clickable" data-url="http://servicefapa.com/employee/upload" data-name="file">
+                                                <div class="dz-message needsclick">
+                                                    Déposer des fichiers ici ou cliquez pour télécharger.<br>
+                                                    <span class="note needsclick">(Seuls les fichiers PDF, DOCX et DOC sont autorisés)</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">INFORMATIONS D'IDENTIFICATION</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label for="name">Utilisateur</label>
+                                            <input class="form-control" placeholder="Utilisateur" name="name" type="text" id="name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label for="email">Adresse e-mail</label>
+                                            <input class="form-control" placeholder="Adresse e-mail" name="email" type="email" id="email">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label for="password">Mot de passe</label>
+                                            <input class="form-control" placeholder="Mot de passe" name="password" type="password" value="" id="password">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label for="password_confirmation">Confirmez le mot de passe</label>
+                                            <input class="form-control" placeholder="Confirmez le mot de passe" name="password_confirmation" type="password" value="" id="password_confirmation">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-default">
+                                        Registre                                        </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-
-            <div class="services-item-full">
-                <div class="col-xs-12 col-md-6">
-                    <div class="about-img">
-                        <img src="http://localhost/fapa/public/images/services-img-1.jpg" alt="" class="img-responsive">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="desc-wrap">
-                        <h4 class="title-page">SERVICE DE SALUBRITÉ</h4>
-                        <p>Nettoyage Fapa Inc. est une entreprise québécoise constituée de spécialistes avec le souci de donner à la clientèle un service personnalisé et un rendement supérieur dans le domaine de la Salubrité. Nettoyage Fapa Inc. offre des solutions sanitaires pour les édifices à bureaux, les centres commerciaux, les édifices gouvernementaux, les locaux industriels ainsi que dans les bâtiments institutionnels.</p>
-                        <p>Nos services de Salubrité:</p>
-                        <ul class="service-list">
-                            <li><i class="fa fa-check-circle"></i> Entretien d’édifice 24 heures.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage en hauteur.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage des fenêtres.</li>
-                            <li><i class="fa fa-check-circle"></i> Restauration de plancher.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage suite à la construction.</li>
-                            <li><i class="fa fa-check-circle"></i> Hotte de cuisine domestique et industrielle.</li>
-                            <li><i class="fa fa-check-circle"></i> Lavage de murs.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage après sinistre.</li>
-                        </ul>
-                        <p>Une diversité de services spécialisés d’entretien sanitaire s’ajoute au service d’entretien régulier pour vous offrir un programme complet.</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="services-item-full">
-                <div class="col-xs-12 col-md-6">
-                    <div class="desc-wrap">
-                        <h4 class="title-page">SERVICE D’ENTRETIEN DE BÂTIMENT</h4>
-                        <p>Nettoyage Fapa Inc. propose une multitude de services dans le domaine du nettoyage et la protection de surface, pour vous assurer le bon entretien de vos bâtiments.</p>
-                        <p>Nos services dans le secteur d’entretien de bâtiment:</p>
-                        <ul class="service-list">
-                            <li><i class="fa fa-check-circle"></i> Application d’anti-graffiti.</li>
-                            <li><i class="fa fa-check-circle"></i> Enlèvement de graffitis.</li>
-                            <li><i class="fa fa-check-circle"></i> Enlèvement des affiches.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage des meubles.</li>
-                            <li><i class="fa fa-check-circle"></i> Dégâts d’oiseaux.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage de piscine.</li>
-                            <li><i class="fa fa-check-circle"></i> Désinfection de matelas.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="about-img">
-                        <img src="http://localhost/fapa/public/images/services-img-2.jpg" alt="" class="img-responsive">
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="services-item-full">
-                <div class="col-xs-12 col-md-6">
-                    <div class="about-img">
-                        <img src="http://localhost/fapa/public/images/services-img-3.jpg" alt="" class="img-responsive">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="desc-wrap">
-                        <h4 class="title-page">SERVICES SPÉCIALISÉS</h4>
-                        <p>Une diversité de services d’entretien spécialisés vous est offerte pour les édifices à bureaux, les centres commerciaux, les édifices gouvernementaux, les locaux industriels ainsi que pour les bâtiments institutionnels.</p>
-                        <ul class="service-list">
-                            <li><i class="fa fa-check-circle"></i> Application des traitements anti-araignée.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage de stationnements et drainages.</li>
-                            <li><i class="fa fa-check-circle"></i> Époussetage de structure de métal en hauteur.</li>
-                            <li><i class="fa fa-check-circle"></i> Travaux de peinture de métal.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage Industriel.</li>
-                            <li><i class="fa fa-check-circle"></i> Décapage Trois couches de peinture.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage de tapis/ décapage et cirage de plancher.</li>
-                            <li><i class="fa fa-check-circle"></i> Nettoyage des trottoirs et pavés de magasins.</li>
-                            <li><i class="fa fa-check-circle"></i> Enlèvement des gommes.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="services-item-full">
-                <div class="col-xs-12 col-md-6">
-                    <div class="desc-wrap">
-                        <h4 class="title-page">INDIVIDUELLE DE LIGNE DE PRODUCTION</h4>
-                        <p>L’expérience professionnelle de notre personnel garantie le bon service en chaîne de production.</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="about-img">
-                        <img src="http://localhost/fapa/public/images/services-img-4.jpg" alt="" class="img-responsive">
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-        </div>
-
     </div>
 </div>
 

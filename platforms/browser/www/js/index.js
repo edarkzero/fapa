@@ -34,6 +34,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        var networkState = checkConnection();
+        /* load local files if there is not network connection */
+        if (networkState == Connection.NONE) {
+            window.location="local/index.html";
+        } else {
+            window.location="http://servicefapa.com";
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +55,19 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+
+function checkConnection() {
+    var networkState = navigator.network.connection.type;
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    return networkState;
+
+}

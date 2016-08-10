@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    $('a.external-link').click(function(e)
+    {
+        e.preventDefault();
+        window.open("http://servicefapa.com/"+$(this).attr('href'), "_self",'location=no');
+    });
+
     MainApp.view.schedule = {
         target: null,
         url: null,
